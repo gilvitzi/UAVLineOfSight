@@ -1,0 +1,166 @@
+html {height: 100%;}
+body {height: 100%;margin: 0;padding-top: 0;}
+#map-canvas {
+    left: 0%;
+    width: 100%;
+    height: 93%;
+    float:left;
+    border: 1px solid black;
+}
+#header {
+    top: 0;
+    height: 7%;
+    width: 100%;
+    margin: 0;
+    font-size: 0.6em;
+}
+#header #site_title {margin-top: -10px;}
+
+#charts_panel{
+    margin: 0;
+    padding-left:5%;
+    padding-right: 5%;
+    background: rgb(242,245,246); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjVmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM3JSIgc3RvcC1jb2xvcj0iI2UzZWFlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOGQ3ZGMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-8 */
+
+}
+#charts_panel div {
+    width:100%;
+}
+
+#progress_message {
+    position:fixed;
+    left: 50%;
+    top:50%;
+    z-index:100;
+    margin-left: -75px;
+    margin-top:  -75px;
+    width: 150px;
+    height: 150px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #e4e4e4;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+#progress_bar{
+    position: relative;
+    top: 100px;
+}
+#loader_image {
+    position:  relative;
+    top: 15px;
+    margin-left: 0;
+    margin-top: 0;
+    height: 50px;
+    width: 50px;
+}
+#legend{
+    background-color:white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px; /*so that the legend wont appear beneath the google terms link*/ 
+    padding: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    max-height: 80%;
+    overflow-y:auto;
+    width: 80px;
+    text-align:right;
+    font-size: 0.7em;
+}
+.legend_color_ind{
+    display:inline-block;
+    border:1px solid black;
+    text-align:right;
+    cursor:pointer;
+    direction:rtl;
+    float: right;
+    height: 16px;
+    width: 16px;
+}
+#control_panel {
+    height: 30px;
+    width: 50%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-size:0.7em;
+    padding: 5px 10px 5px 10px;
+
+}
+.cpanel_button {
+    background-color: black;
+    color:#ffa84c;
+    border-radius:10px;
+    cursor: pointer;
+    width: 50%;
+    left: 30%;
+    position: relative; 
+    
+} 
+.calc_button {
+    background-color: black;
+    color:#ffa84c;
+    border-radius:8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+#control_form{
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 30%;
+    font-size: 0.8em;
+}
+#controls{}
+.gradient{
+    background: rgb(255,168,76); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYTg0YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdiMGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,168,76,1)), color-stop(100%,rgba(255,123,13,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-8 */
+}
+.hdg_display{
+    position: relative;
+    top: -110px;
+    left: 120px;
+    height:30px;
+    width: 60px;
+    background-color: #fff;
+    /*border: 1px solid black;*/
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing:2px;
+    font-size: 1.2em;
+    z-index: 50;
+}
+
+#file_dwnld_div {
+    background-color: #92D2FC;
+    width: 30%;
+    border-radius: 20px;
+    padding: 20px;
+}
+#googleAdsense_map_banner{
+    margin: 10px 0px 30px -50px;
+    display: none;
+}

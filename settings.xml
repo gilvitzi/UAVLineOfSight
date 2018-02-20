@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+    <develop>
+        <google_api>
+            <api_key>AIzaSyBMN74-mDm4UiV3v3GZO5iG0zE8KkqjmeQ</api_key>
+            <Referers>Any referer allowed</Referers>
+            <Activated_on>Mar 17, 2013 9:50 AM</Activated_on>
+            <Activated_by>gilvitzi@gmail.com</Activated_by>
+        </google_api>
+    </develop>
+</settings>
